@@ -1,5 +1,7 @@
 public class Methoden {
 
+
+
     // Hauptmethode = Start des gesamten Programms
     public static void main(String[] args) {
         // hier steht der Programmcode, der immer
@@ -7,6 +9,9 @@ public class Methoden {
         ausgabe( 17 );
         ausgabe( 3.14 );
         System.out.println( berechne( 7, 9 ) );
+        System.out.println( fakultät(35) );
+        System.out.println( fibonacci(8) );
+        System.out.println( fibonacci(50) );
     }
 
     // Methode = Funktion, Prozedur, Unterprogramm, Subroutine
@@ -40,7 +45,15 @@ public class Methoden {
         return berechne(a, b, 0);
     }
 
+    // Rekursion 1. Ordnung
+    public static long fakultät(long n) {
+        if (n == 1) return 1;
+        return n * fakultät(n-1);
+    }
 
-
-
+    // Rekursion 2. Ordnung
+    public static long fibonacci(long n) {
+        if (n <= 2) return 1;
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
 }
